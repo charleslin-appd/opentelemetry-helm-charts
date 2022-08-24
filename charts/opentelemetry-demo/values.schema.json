@@ -230,7 +230,7 @@
             },
             "name": {
               "type": "string"
-            },
+            }, 
             "optional": {
               "type": "boolean"
             }
@@ -281,6 +281,9 @@
                     "$ref": "#/definitions/ObservabilityProp"
                 },
                 "jaeger": {
+                    "$ref": "#/definitions/ObservabilityProp"
+                },
+                "appdynamics": {
                     "$ref": "#/definitions/ObservabilityProp"
                 }
             },

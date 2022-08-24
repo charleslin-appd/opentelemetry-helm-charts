@@ -76,6 +76,12 @@ exporters:
     tls:
       insecure: true
   {{- end}}
+  {{- if .Values.observability.appdynamics.enabled }}
+  otlp:
+    endpoint: "${APPDYNAMICS_ADDR}"
+    tls:
+      insecure: true
+  {{- end}}
   logging:
 
 processors:
@@ -92,5 +98,8 @@ service:
         - logging
         {{- if .Values.observability.jaeger.enabled }}
         - jaeger
+        {{- end}}
+        {{- if .Values.observability.appdynamics.enabled }}
+        - otlp
         {{- end}}
 {{- end }}

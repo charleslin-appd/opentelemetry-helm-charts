@@ -3,6 +3,8 @@ observability:
     enabled: true
   jaeger:
     enabled: true
+  appdynamics:
+    enabled: true
 
 # if the enabled is true, the items in this object will apply to all components
 default:
