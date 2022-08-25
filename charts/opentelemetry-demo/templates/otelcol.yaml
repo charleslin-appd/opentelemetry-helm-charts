@@ -41,7 +41,6 @@ spec:
             value: {{ include "otel-demo.name" . }}-jaeger:14250
         {{- end }}
         {{- if .Values.observability.appdynamics.enabled }}
-        env:
           - name: APPDYNAMICS_ADDR
             value: "http://appdynamics-otel-collector-service.appdynamics.svc.cluster.local:4317"
         {{- end }}        
